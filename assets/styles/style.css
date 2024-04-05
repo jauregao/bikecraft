@@ -126,12 +126,11 @@
   text-transform: uppercase;
 
   opacity: 0.9;
-  transition: 300ms linear;
+  transition: 100ms linear;
 }
 
 .btn:hover {
   opacity: 1;
-  transition: 300ms linear;
 }
 
 /* LISTS*/
@@ -213,7 +212,73 @@ a {
 
 /* BANNER */
 
+.banner-bg{
+  background-color: var(--c12);  
+}
 
+.banner-content{
+  display: flex;
+  justify-content: space-between;
+
+    height: 700px;
+}
+
+.banner-left a {
+  width: 50%;
+}
+
+.banner-left h1{
+  color: var(--w);
+  margin: 160px 0;
+}
+
+.banner-right img {
+  height: 800px;
+  width: auto;
+
+  margin-right: -80px;
+
+  border-radius: 5px;
+
+  overflow-y: visible;
+}
+
+/* BIKES */
+
+.products {
+  padding: 160px 0;
+}
+
+.products h2 {
+  padding-left: 80px;
+}
+
+.bikes {
+  display: flex;
+
+  gap: 32.5px;
+}
+
+.bike img {
+  width: 378px;
+  height: 427px;
+
+  border-radius: 5px;
+}
+
+.bike-name {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.yellow-line {
+  height: 7px;
+  width: 12px;
+
+  background-color: var(--p1);
+}
 
 /* RESPONSIVE  */
 
