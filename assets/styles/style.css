@@ -30,7 +30,7 @@
 }
 
 .container{
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
@@ -125,6 +125,8 @@
 
   text-transform: uppercase;
 
+  box-shadow: 0 1px 2px var(--c10);
+
   opacity: 0.9;
   transition: 100ms linear;
 }
@@ -157,6 +159,12 @@ a {
 .yellow-txt {
   color: var(--p1);
 }
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
 
 /* HEADER */
 
@@ -212,56 +220,79 @@ a {
 
 /* BANNER */
 
-.banner-bg{
-  background-color: var(--c12);  
+.banner-bg {
+  background-color: var(--c12);
+
+  box-shadow: inset 0 -120px var(--w);
+
+  background-image: url(../img/dec/bottom-left.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 200px left 120px;
 }
 
-.banner-content{
-  display: flex;
-  justify-content: space-between;
+.banner-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
-    height: 700px;
+  gap: 40px;
 }
 
-.banner-left a {
+.banner-content h1 {
+  color: var(--w);
+
+  line-height: 1.125;
+
+  margin-bottom: 32px;
+}
+
+.left {
+  grid-row: 2 / span 2;
+
+  padding-bottom: 200px;
+}
+
+.left a {
   width: 50%;
 }
 
-.banner-left h1{
-  color: var(--w);
-  margin: 160px 0;
+.left p {
+  color: var(--c4);
+
+  margin-bottom: 20px;
 }
 
-.banner-right img {
-  height: 800px;
-  width: auto;
-
-  margin-right: -80px;
-
-  border-radius: 5px;
-
-  overflow-y: visible;
+.right {
+  grid-row: 1 / span 3;
+  grid-column: 2 / span 3;
 }
+
+.right img {
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* BIKES */
 
 .products {
   padding: 160px 0;
+  max-width: 1400px;
 }
 
-.products h2 {
-  padding-left: 80px;
-}
+/* .products h2 {
+  padding-left: 100px;
+} */
 
 .bikes {
   display: flex;
+  justify-content: center;
 
-  gap: 32.5px;
+  gap: 40px;
 }
 
 .bike img {
-  width: 378px;
-  height: 427px;
+  width: 460px;
+  height: 520px;
 
   border-radius: 5px;
 }
@@ -286,10 +317,54 @@ a {
   .container {
     max-width: 90%;
   }
+
+  .banner-content h1 {
+    font-size: 48px;
+  }
+
+  .banner-content p {
+    font-size: 18px;
+  }
+
+  .banner-content a {
+    font-size: 16px;
+  }
 }
 
+@media (max-width: 1100px) {
+  .banner-content h1 {
+    font-size: 40px;
+  }
 
-@media (max-width: 768px ) {
+  .banner-content p{
+    font-size: 16px;
+  }
+
+  .banner-content a{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 950px) {
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 80px;
+
+    box-shadow: inset 0 -60px var(--w);
+  }
+
+  .left {
+    padding-bottom: 32px;
+  }
+
+  .right img {
+    
+  }
+}
+
+@media (max-width: 768px) {
 
   .header-menu{
     gap: 12px;
