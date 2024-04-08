@@ -39,7 +39,8 @@
 .font-1-xxl {
   font-family: 'Poppins';
   font-weight: 600;
-  font-size: clamp(4rem, 4.25rem, 4.5rem);
+  font-size: 4.5rem
+  /* font-size: clamp(4rem, 4.25rem, 4.5rem); */
 }
 
 .font-1-xl {
@@ -271,17 +272,12 @@ img{
   object-fit: cover;
 }
 
-
 /* BIKES */
 
 .products {
   padding: 160px 0;
   max-width: 1400px;
 }
-
-/* .products h2 {
-  padding-left: 100px;
-} */
 
 .bikes {
   display: flex;
@@ -311,6 +307,42 @@ img{
   background-color: var(--p1);
 }
 
+
+/* PARCEIROS */
+
+main {
+margin-bottom: 600px;
+}
+
+.parceiros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  max-width: 1300px;
+}
+
+.parceiros {
+  display: grid;
+
+  align-items: center;
+  justify-content: center;
+
+  border: transparent;
+}
+
+.parceiros div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 25px;
+
+  height: 100%;
+
+  border: 2px solid var(--c4);
+}
+
 /* RESPONSIVE  */
 
 @media (max-width: 1300px) {
@@ -318,7 +350,8 @@ img{
     max-width: 90%;
   }
 
-  .banner-content h1 {
+  .banner-content h1,
+  .products h2 {
     font-size: 48px;
   }
 
@@ -329,10 +362,28 @@ img{
   .banner-content a {
     font-size: 16px;
   }
+
+  .products {
+    max-width: 95%;
+  }
+
+  .bike img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bike-name h3 {
+    font-size: 34px;
+  }
+
+  .bike p {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 1100px) {
-  .banner-content h1 {
+  .banner-content h1,
+  .products h2 {
     font-size: 40px;
   }
 
@@ -343,6 +394,24 @@ img{
   .banner-content a{
     font-size: 14px;
   }
+
+  .bikes {
+    gap: 20px;
+  }
+  
+    .bike img {
+      height: 80%;
+      object-fit: cover;
+    }
+  
+    .bike-name h3 {
+      font-size: 30px;
+    }
+
+    .bike p {
+    font-size: 16px;
+  }
+
 }
 
 @media (max-width: 950px) {
@@ -360,8 +429,22 @@ img{
   }
 
   .right img {
-    
+    width: 100%;
+    height: 400px;
   }
+
+  .bikes {
+    gap: 14px;
+  }
+
+  .bike-name h3 {
+    font-size: 24px;
+  }
+
+  .bike p {
+    font-size: 14px;
+  }
+  
 }
 
 @media (max-width: 768px) {
@@ -391,10 +474,71 @@ img{
   .header-menu a:hover::after {
     width: 0px;
   }
+
+  .right img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .bikes {
+    gap: 8px;
+  }
+
+    .bike-name h3 {
+      font-size: 20px;
+    }
+  
+    .bike p {
+      font-size: 12px;
+    }
+
 }
 
-@media (max-width: 400px ) {
+@media (max-width: 550px ) {
   .header {
     flex-direction: column;
   }
+
+  .bikes {
+    flex-direction: column;
+  
+    width: 100%;
+  
+    align-items: center;
+
+    gap: 40px;
+  }
+  
+  .bike img {
+    width: auto;
+    height: 450px;
+  
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    flex-direction: column;
+  }
+
+    .header-menu li>a {
+      font-size: 16px;
+
+      gap: 5px;
+      padding: 10px 5px;
+    }
+
+    .banner-content h1,
+    .products h2 {
+      font-size: 36px;
+    }
+  
+    .banner-content p {
+      font-size: 14px;
+    }
+  
+    .banner-content a {
+      font-size: 12px;
+    }
 }
